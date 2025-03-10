@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+:root {
+  /* Primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+  /* Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  background-color: var(--light-grayish-cyan);
+}
+
+#logo {
+  display: block;
+  margin: 50px auto;
+}
+
+main {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 1rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grayish-cyan);
+}
+
+.input-container input {
+  font-family: inherit;
+  text-align: right;
+  height: 2rem;
+  width: 100%;
+  border: 0;
+  background-color: var(--very-light-grayish-cyan);
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+/* remove arrows for number input in Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* remove arrows for number input in Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.tip-ammount-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.2rem;
+  background-color: var(--very-dark-cyan);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
