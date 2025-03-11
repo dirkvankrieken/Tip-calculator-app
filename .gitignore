@@ -16,3 +16,5 @@
 .prettierignore
 
 node_modules
+README-info.md
+.sass-cache

@@ -20,42 +20,52 @@
 <body>
 	<img id="logo" src="images/logo.svg" alt="Splitter logo">
 	<main>
-		<h1>Bill</h1>
-		<div class="input-container">
-			<img src="images/icon-dollar.svg" alt="dollar icon">
-			<input type="number" name="price" id="price" value="142.55">
+		<div class="flex-wrapper">
+
+			<h1>Bill</h1>
+			<div class="input-container">
+				<img src="images/icon-dollar.svg" alt="dollar icon">
+				<input type="number" name="price" id="price" value="142.55">
+			</div>
+
+			<h1 class="select-tip-header">
+				Select Tip %
+			</h1>
+
+			<div class="tip-percentage-container">
+				<button class="tip-percentage">5%</button>
+				<button class="tip-percentage">10%</button>
+				<button class="tip-percentage tip-active">15%</button>
+				<button class="tip-percentage">25%</button>
+				<button class="tip-percentage">50%</button>
+				<button class="tip-percentage tip-custom">Custom</button>
+			</div>
+
+			<h1 class="number-of-people-header">Number of People</h1>
+			<div class="input-container">
+				<img src="images/icon-person.svg" alt="person icon">
+				<input type="number" name="price" id="price" value="5">
+			</div>
+
+
 		</div>
-
-		<h1>
-			Select Tip %
-		</h1>
-
-		<div class="tip-ammount-container">
-			<button class="tip-ammount">5%</button>
-			<button class="tip-ammount">10%</button>
-			<button class="tip-ammount">15%</button>
-			<button class="tip-ammount">25%</button>
-			<button class="tip-ammount">50%</button>
-			<button class="tip-ammount tip-custom">custom</button>
-		</div>
-
-		<h1>Number of People</h1>
-		<div class="input-container">
-			<img src="images/icon-dollar.svg" alt="dollar icon">
-			<input type="number" name="price" id="price" value="5">
-		</div>
-
-
 		<section>
 			<div class="tip-amount">
-				Tip Amount
-				/ person
+				<div class="tip-amount-text">
+					Tip Amount <br>
+					<span>/ person</span>
+				</div>
+				<div class="tip-amount-number">$4.27</div>
 			</div>
 			<div class="total">
-				Total
-				/ person
+				<div class="total-text">
+					Total <br>
+					<span>/ person</span>
+
+				</div>
+				<div class="tip-amount-number">$32.79</div>
 			</div>
-			<button>
+			<button id="reset-button">
 				Reset
 			</button>
 		</section>
