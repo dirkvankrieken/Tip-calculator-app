@@ -4,8 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
-
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 	<title>Frontend Mentor | Tip calculator app</title>
@@ -21,11 +19,14 @@
 	<img id="logo" src="images/logo.svg" alt="Splitter logo">
 	<main>
 		<div class="flex-wrapper">
-
-			<h1>Bill</h1>
+			<div class="not-zero-flex">
+				<h1>Bill</h1>
+				<span id="price-not-zero" class="invalid-message hide">Can't be zero</span>
+			</div>
+			<span style="display: none" id="empty-field" class="invalid-message">Please insert a number</span>
 			<div class="input-container">
 				<img src="images/icon-dollar.svg" alt="dollar icon">
-				<input type="number" name="price" id="price" value="142.55">
+				<input type="number" name="price" id="price">
 			</div>
 
 			<h1 class="select-tip-header">
@@ -38,32 +39,39 @@
 				<button class="tip-percentage tip-active">15%</button>
 				<button class="tip-percentage">25%</button>
 				<button class="tip-percentage">50%</button>
-				<button class="tip-percentage tip-custom">Custom</button>
+				<button class="tip-custom">Custom</button>
+				<input class="tip-percentage tip-custom-input" type="number" name="custom-tip" id="custom" value="test"
+					style="display: none">
 			</div>
 
-			<h1 class="number-of-people-header">Number of People</h1>
+			<div class="not-zero-flex number-of-people-header">
+				<h1>Number of People</h1>
+				<span id="numberofpeople-not-zero" class="invalid-message hide">Can't be zero</span>
+			</div>
 			<div class="input-container">
 				<img src="images/icon-person.svg" alt="person icon">
-				<input type="number" name="price" id="price" value="5">
+				<input type="number" name="number-of-people" id="number-of-people">
 			</div>
 
 
 		</div>
 		<section>
-			<div class="tip-amount">
-				<div class="tip-amount-text">
-					Tip Amount <br>
-					<span>/ person</span>
+			<div class="flex-wrapper">
+				<div class="tip-amount">
+					<div class="tip-amount-text">
+						Tip Amount <br>
+						<span>/ person</span>
+					</div>
+					<div id="tip" class="amount-number"></div>
 				</div>
-				<div class="tip-amount-number">$4.27</div>
-			</div>
-			<div class="total">
-				<div class="total-text">
-					Total <br>
-					<span>/ person</span>
+				<div class="total">
+					<div class="total-text">
+						Total <br>
+						<span>/ person</span>
 
+					</div>
+					<div id="total" class="amount-number"></div>
 				</div>
-				<div class="tip-amount-number">$32.79</div>
 			</div>
 			<button id="reset-button">
 				Reset
@@ -76,6 +84,8 @@
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="#">Dirk van Krieken</a>.
 	</div>
+
+	<script src="script.js"></script>
 </body>
 
 </html>
