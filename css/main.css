@@ -50,8 +50,6 @@ body {
 
 #logo {
   display: block;
-  position: relative;
-  bottom: 0;
   margin: 20px auto;
 }
 
@@ -75,6 +73,10 @@ h1 {
 .not-zero-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.input-not-zero {
+  border: 2px solid red !important;
 }
 
 .number-of-people-header {
@@ -105,9 +107,14 @@ input:focus {
   height: 3rem;
   width: 100%;
   border: 0;
+  border-radius: 5px;
   background-color: var(--very-light-grayish-cyan);
   padding-left: 25px;
   padding-right: 10px;
+}
+
+.input-container input:focus {
+  border: 2px solid var(--strong-cyan);
 }
 
 /* remove arrows for number input in Chrome, Safari, Edge, Opera */
@@ -161,7 +168,9 @@ input[type=number] {
   font-size: 1.5rem;
 }
 
-.tip-custom:hover {
+.tip-custom:hover,
+#price,
+#number-of-people {
   cursor: pointer;
 }
 

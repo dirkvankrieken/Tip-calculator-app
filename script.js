@@ -5,6 +5,8 @@ const resetButton = document.getElementById('reset-button')
 const customInput = document.querySelector('.tip-custom-input')
 
 priceInputBox.addEventListener('keyup', () => {
+  priceInputBox.classList.remove('input-not-zero')
+  document.getElementById('price-not-zero').classList.add('hide')
   if (numberOfPeopleInputBox.value > 0 && priceInputBox.value > 0) {
     if (
       document
@@ -19,9 +21,9 @@ priceInputBox.addEventListener('keyup', () => {
     }
   } else if (priceInputBox.value === '0') {
     document.getElementById('price-not-zero').classList.remove('hide')
+    priceInputBox.classList.add('input-not-zero')
   } else {
     calculateAmmounts(0)
-    document.getElementById('price-not-zero').classList.add('hide')
   }
 })
 
@@ -30,6 +32,8 @@ customInput.addEventListener('keyup', () => {
 })
 
 numberOfPeopleInputBox.addEventListener('keyup', () => {
+  numberOfPeopleInputBox.classList.remove('input-not-zero')
+  document.getElementById('numberofpeople-not-zero').classList.add('hide')
   if (numberOfPeopleInputBox.value > 0 && priceInputBox.value > 0) {
     if (
       document
@@ -44,18 +48,11 @@ numberOfPeopleInputBox.addEventListener('keyup', () => {
     }
   } else if (numberOfPeopleInputBox.value === '0') {
     document.getElementById('numberofpeople-not-zero').classList.remove('hide')
+    numberOfPeopleInputBox.classList.add('input-not-zero')
   } else {
     calculateAmmounts(0)
-    document.getElementById('numberofpeople-not-zero').classList.add('hide')
   }
 })
-
-function reset() {
-  priceInputBox.value = ''
-  numberOfPeopleInputBox.value = ''
-  customInput.value = ''
-  calculateAmmounts(0)
-}
 
 resetButton.addEventListener('click', reset)
 
@@ -111,6 +108,13 @@ function calculateAmmounts(percentage) {
     document.getElementById('tip').innerHTML = ''
     document.getElementById('total').innerHTML = ''
   }
+}
+
+function reset() {
+  priceInputBox.value = ''
+  numberOfPeopleInputBox.value = ''
+  customInput.value = ''
+  calculateAmmounts(0)
 }
 
 reset()
