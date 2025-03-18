@@ -94,8 +94,8 @@ function calculateAmmounts(percentage) {
     const numberOfPeople = parseInt(numberOfPeopleValue)
     const tipPerPerson = (price * (percentage / 100)) / numberOfPeople
     const totalPerPerson = price / numberOfPeople + tipPerPerson
-    document.getElementById('tip').innerHTML = tipPerPerson.toFixed(2)
-    document.getElementById('total').innerHTML = totalPerPerson.toFixed(2)
+    document.getElementById('tip').innerHTML = '$' + tipPerPerson.toFixed(2)
+    document.getElementById('total').innerHTML = '$' + totalPerPerson.toFixed(2)
   } else {
     if (priceInputBox.value === '0') {
       document.getElementById('price-not-zero').classList.remove('hide')
