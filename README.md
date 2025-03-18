@@ -46,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-- how to take a value from an input form, how to use it as a number by parsing it from a string to an integer, so that calculations can be done with it by using the parseInt() and parseFloat() functions.
+- how to take a value from an input form, how to use it as a number by parsing it from a string to an integer, so that calculations can be done with it by using the parseInt() and parseFloat() functions.`
 
 ## Author
 
